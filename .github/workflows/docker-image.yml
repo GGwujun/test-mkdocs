@@ -17,7 +17,7 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:test
     - name: Run the Docker image
-      run: docker run --rm -v $(pwd):/test-mkdocs my-image-name:test mkdocs build -f mkdocs.yml
+      run: docker run --rm -v $(pwd):/test-mkdocs my-image-name:test mkdocs build
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
